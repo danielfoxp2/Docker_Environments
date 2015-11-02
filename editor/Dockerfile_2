@@ -1,0 +1,42 @@
+FROM alpine:latest
+
+RUN apk add --update \
+    bash \
+    tree \
+    tmux \
+    git \
+    python \
+    python-dev \
+    && apk add --update --virtual tempBuilders \
+    ctags \
+    build-base \
+    make \
+    mercurial \
+    libxpm-dev \
+    libx11-dev \
+    libxt-dev \
+    ncurses-dev \
+    && cd /tmp \
+    && hg clone https://code.google.com/p/vim/ \
+    && cd /tmp/vim \
+    && ./configure --with-features=big \
+                   --enable-multibyte \
+                   --enable-pythoninterp \
+                   --with-python-config-dir=/usr/lib/python2.7/config \
+                   --disabel-gui \
+                   --disable-netbeans \
+                   --prefix /usr \
+    && make VIMRUNTIMEDIR=/usr/share/vim/vim74 \
+    && make install \
+    && apk del tempBuilders \ 
+    && apk add --update libsm libice libxt libx11 ncurses \
+    && rm -rf /tmp/* /var/log/* /var/tmp/* /var/cache/apk/* \
+
+    && git clone https://github.com/danielfoxp2/dotfiles.git \
+    && git clone https://github.com/gmarik/Vundle.vim.git /$HOME/.vim/bundle/Vundle.vim \
+    && mv /dotfiles/.vim/colors /$HOME/.vim/colors \
+    && mv /dotfiles/.vimrc /$HOME/.vimrc \
+    && mv /dotfiles/.tmux.conf /$HOME/.tmux.conf \
+    && rm -rf /var/cache/apk/* /dotfiles 
+
+ENTRYPOINT tmux -2
