@@ -12,3 +12,4 @@ EXPOSE 1337
 #In fact, the one who mess up with all is node-gyp.
 #then, it was needed make to run something for node-gyp. So to be sure I installed build-base (because I suposed that gcc would be a dependency too).
 #So that's the result. 
+
