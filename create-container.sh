@@ -29,6 +29,23 @@ unit(){
     name="${1:-unitbox}"
     $dockerrun $name -dt $dockervolumes unitbox sh
 }
+
+acceptance(){
+    #cucumber container
+}
+
+justMe(){
+    unit
+    acceptance
+    alone
+}
+
+weAll(){
+    pair pairbox #users
+    unit
+    acceptance
+}
+
 #testar se $@ tem algo, se não tiver chamar o main, se tiver chamar o $@
 "$@"
 
