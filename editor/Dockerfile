@@ -40,6 +40,7 @@ RUN apk add --update \
     && mv $HOME/dotfiles/.vim/colors $HOME/.vim/colors \
     && mv $HOME/dotfiles/.vimrc $HOME/.vimrc \
     && mv $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf \
-    && rm -rf /var/cache/apk/* $HOME/dotfiles 
+    && rm -rf /var/cache/apk/* $HOME/dotfiles \
+    && apk --no-cache add docker
 
 
