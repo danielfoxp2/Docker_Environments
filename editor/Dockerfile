@@ -36,7 +36,7 @@ RUN apk add --update \
 
     && cd $HOME \
     && git clone https://github.com/danielfoxp2/dotfiles.git \
-    && git clone https://github.com/gmarik/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim \
+    && git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim \
     && mv $HOME/dotfiles/.vim/colors $HOME/.vim/colors \
     && mv $HOME/dotfiles/.vimrc $HOME/.vimrc \
     && mv $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf \
