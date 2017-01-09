@@ -28,7 +28,7 @@ RUN apk add --update \
                    --disable-gui \
                    --disable-netbeans \
                    --prefix /usr \
-    && make VIMRUNTIMEDIR=/usr/share/vim/vim74 \
+    && make VIMRUNTIMEDIR=/usr/share/vim/vim80 \
     && make install \
     && apk del ctags build-base make libxpm-dev libx11-dev libxt-dev ncurses-dev \
     && apk add --update libsm libice libxt libx11 ncurses \
