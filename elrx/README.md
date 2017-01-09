@@ -16,4 +16,9 @@ Sadly, is not that simple to do it, I need to teach phoenix to find where node i
 
 So I will update here everytime some news come up
 
+#Changes in plan
 
+I spend my time not doing what I was supposed to be doing. So now I don't have time to experiment this idea (yeah, I know, shame on me).
+So I changed plans and installed node inside elixir/phoenix container... Then I don't need to worry about this for now. 
+
+When things become cool, I will return here and finish the original idea.
