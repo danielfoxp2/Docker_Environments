@@ -18,7 +18,6 @@ So I will update here everytime some news come up
 
 #Changes in plan
 
-I spend my time not doing what I was supposed to be doing. So now I don't have time to experiment this idea (yeah, I know, shame on me).
-So I changed plans and installed node inside elixir/phoenix container... Then I don't need to worry about this for now. 
+Well, I've tried to run node in separate container. The npm install works, but when I go back to phoenix container and call phoenix.server it throws an error because the whatcher can't run because node is not present. The message continues and tell me that I need to install node and run npm install. But this is something I already did and worked. So, I guess that if brunch is used the node dependency is deeper than I thougth. 
 
-When things become cool, I will return here and finish the original idea.
+In future I'll go back to this issue. For now, everything in the container =(
