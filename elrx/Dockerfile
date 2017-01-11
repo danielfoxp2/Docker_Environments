@@ -6,6 +6,5 @@ RUN set -xe \
     && mix local.hex --force \
     && mix local.rebar --force \
     && mix archive.install --force https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez \
-    && apt-get -qq update \
-    && apt-get install inotify-tools
+    && apt-get install -y inotify-tools
 
