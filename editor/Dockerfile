@@ -33,10 +33,10 @@ RUN apk add --update \
     && apk del ctags build-base make libxpm-dev libx11-dev libxt-dev ncurses-dev \
     && apk add --update libsm libice libxt libx11 ncurses \
     && rm -rf /tmp/* /var/log/* /var/tmp/* /var/cache/apk/* \
-
     && cd $HOME \
     && git clone https://github.com/danielfoxp2/dotfiles.git \
     && git clone https://github.com/VundleVim/Vundle.vim.git $HOME/.vim/bundle/Vundle.vim \
+    && git config --global core.editor vim \
     && mv $HOME/dotfiles/.vim/colors $HOME/.vim/colors \
     && mv $HOME/dotfiles/.vimrc $HOME/.vimrc \
     && mv $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf \
