@@ -1,7 +1,7 @@
 FROM elixir:latest
 
 RUN set -xe \
-    && curl -sL https://deb.nodesource.com/setup_6.x | bash - \
+    && curl -sL https://deb.nodesource.com/setup_8.x | bash - \
     && apt-get install -y nodejs \
     && mix local.hex --force \
     && mix local.rebar --force \
