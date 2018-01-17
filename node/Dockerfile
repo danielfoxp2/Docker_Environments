@@ -1,6 +1,6 @@
 FROM gliderlabs/alpine:latest
 
-ENV VERSION=v6.9.4 CMD=node DOMAIN=nodejs.org
+ENV VERSION=v8.9.4 CMD=node DOMAIN=nodejs.org
 
 # For base builds
 # ENV CONFIG_FLAGS="--without-npm" RM_DIRS=/usr/include
