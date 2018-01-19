@@ -41,7 +41,7 @@ RUN apk add --update \
     && git config --global core.editor vim \
     && mv $HOME/dotfiles/.vim/colors $HOME/.vim/colors \
     && mv $HOME/dotfiles/.vimrc $HOME/.vimrc \
-    && sed -i '/Bundle '"'"'danielfoxp2\/vim-renamecurrentfile'"'"'/a Bundle '"'"'danielfoxp2\/$alternate_files'"'" $HOME/.vimrc \
+    && sed -i "/Bundle ""'""danielfoxp2\/vim-renamecurrentfile""'""/a Bundle ""'""danielfoxp2\/$alternate_files""'" $HOME/.vimrc \ 
     && mv $HOME/dotfiles/.tmux.conf $HOME/.tmux.conf \
     && rm -rf /var/cache/apk/* $HOME/dotfiles \
     && apk --no-cache add docker
